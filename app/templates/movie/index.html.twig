@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.movie_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+
+
+    {% else %}
+        <div>
+            <a href="{{ url('security_login') }}">{{ 'action.login'|trans }}</a>
+        </div>
+        <div>
+            <a href="{{ url('user_register') }}">{{ 'action.register'|trans }}</a>
+        </div>
+    {% endif %}
+    {% if is_granted('ROLE_USER') %}
+    <div>
+        <a href="{{ url('user_index') }}" title="{{ 'action.user_options'|trans }}">
+            {{ 'action.user_options'|trans }}
+        </a>
+    </div>
+    {% endif %}
+    {% if is_granted('ROLE_ADMIN') %}
+    <div>
+        <a href="{{ url('admin_index') }}" title="{{ 'action.admin_options'|trans }}">
+            {{ 'action.admin_options'|trans }}
+        </a>
+    </div>
+    {% endif %}
+    <h1>{{ 'title.movie_list'|trans }}</h1>
+
+    {% if pagination is defined and pagination|length %}
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination,'label.id'|trans, 'm.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.title'|trans, 'm.title') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.year'|trans, 'm.year') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.rate'|trans, 'm.rate') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.boxoffice'|trans, 'm.boxoffice')  }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.country'|trans, 'c.name') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.director'|trans, 'd.name') }}</th>
+                <th>{{ 'label.more'|trans }}</th>
+               {# <th>{{ 'label.edit'|trans }}</th>
+                <th>{{ 'label.delete'|trans }}</th>#}
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for movie in pagination %}
+                <tr>
+
+                    <td>{{ movie.id }}</td>
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.year }}</td>
+                    <td>{{ movie.rate }}</td>
+                    <td>{{ movie.boxoffice }}</td>
+                    <td>{{ movie.country.name }}</td>
+                    <td>{{ movie.director.name }}</td>
+                    <td>
+                        <a href="{{ url('movie_view', {id: movie.id}) }}" title="{{ 'action.view'|trans }}">
+                            {{ 'action.view'|trans }}
+                        </a>
+                    </td>
+                   {# <td>
+                        <a href="{{ url('movie_edit', {id: movie.id}) }}" title="{{ 'action.edit'|trans }}">
+                            {{ 'action.edit'|trans }}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ url('movie_delete', {id: movie.id}) }}" title="{{ 'action.delete'|trans }}">
+                            {{ 'action.delete'|trans }}
+                        </a>
+                    </td>#}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+
+
+
+
+    {% else %}
+        <p>
+            {{ 'message.empty_list'|trans }}
+        </p>
+    {% endif %}
+
+{% endblock %}

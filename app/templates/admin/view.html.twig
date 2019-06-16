@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.movie_view'|trans({'%id%': movie.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.movie_view'|trans({'%id%': movie.id|default('')}) }}</h1>
+    {% if movie is defined and movie|length %}
+        <dl class="dl-horizontal">
+            <dt>{{ 'label.id'|trans }}</dt>
+            <dd>{{ movie.id }}</dd>
+            <dt>{{ 'label.title'|trans }}</dt>
+            <dd>{{ movie.title }}</dd>
+
+            <dt>{{ 'label.image'|trans }}</dt>
+            <dd>
+                {% if photo is defined and photo|length %}
+                    <div>
+                        <img src="{{ asset('uploads/photos/'~ photo.file.filename) }}">
+                    </div>
+                {% else %}
+                    {% include 'default/_single_flash_message.html.twig' with {
+                        type: 'warning',
+                        message: 'message.item_not_found'|trans
+                    } %}
+                {% endif %}</dd>
+
+            <dt>{{ 'label.year'|trans }}</dt>
+            <dd>{{ movie.year }}</dd>
+            <dt>{{ 'label.rate'|trans }}</dt>
+            <dd>{{ movie.rate }}</dd>
+            <dt>{{ 'label.boxoffice'|trans }}</dt>
+            <dd>{{ movie.boxoffice }}</dd>
+            <dt>{{ 'label.country'|trans }}</dt>
+            <dd>{{ movie.country.name }}</dd>
+            <dt>{{ 'label.category'|trans }}</dt>
+            <dd>{{ movie.category.name }}</dd>
+            <dt>{{ 'label.director'|trans }}</dt>
+            <dd>{{ movie.director.name }}</dd>
+            <dt>{{ 'label.screenwriter'|trans }}</dt>
+            <dd>{{ movie.screenwriter.name }}</dd>
+           <dt>{{ 'label.actors'|trans }}</dt>
+            <dd>{% for actor in movie.actors %}
+                    {{actor.name}}{% if not loop.last %},{% endif %}
+                {% endfor %} </dd>
+            <dt>{{ 'label.added'|trans }}</dt>
+            <dd>{{ movie.author.userdata.firstName }}</dd>
+            <dt>{{ 'label.reviews'|trans }}</dt>
+            <table class="table table-striped">
+                <tr>
+                    <th>{{ 'label.review-content'|trans }}</th>
+                    <th>{{ 'label.review-rate'|trans }}</th>
+                    <th>{{ 'label.review-date'|trans }}</th>
+                    <th>{{ 'label.review-author'|trans }}</th>
+                    <th>{{ 'label.review-delete'|trans }}</th>
+                </tr>
+            <dd>{% for review in movie.reviews %}
+
+                <tr>
+                    <td>{{review.content}}</td>
+                    <td>{{review.rate}}</td>
+                    <td>{{review.date|localizeddate}}</td>
+                    <td>{{review.author.userdata.firstName}}</td>
+                    <td><a href="{{ url('review_delete', {id: review.id}) }}" title="{{ 'action.delete_review'|trans }}">
+                            {{ 'action.delete_review'|trans }}
+                        </a></td>
+
+                    </tr>
+                {% endfor %} </dd>
+
+            </table>
+                <dd>
+                    <a href="{{ url('admin_index') }}" title="{{ 'label.back'|trans }}">
+                        {{ 'label.back'|trans }}
+                    </a>
+                </dd>
+        </dl>
+    {% else %}
+        <p>
+            {{ 'message.item_not_found'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

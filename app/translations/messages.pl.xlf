@@ -1,0 +1,353 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="label.id">
+                <source>label.id</source>
+                <target>Id</target>
+            </trans-unit>
+
+            <trans-unit id="label.title">
+                <source>label.title</source>
+                <target>Tytuł</target>
+            </trans-unit>
+
+            <trans-unit id="title.movie_list">
+                <source>title.movie_list</source>
+                <target>Lista filmów</target>
+            </trans-unit>
+
+            <trans-unit id="label.year">
+                <source>label.year</source>
+                <target>Rok</target>
+            </trans-unit>
+
+            <trans-unit id="label.rate">
+                <source>label.rate</source>
+                <target>Ocena</target>
+            </trans-unit>
+
+            <trans-unit id="label.boxoffice ">
+                <source>label.boxoffice</source>
+                <target>Boxoffice</target>
+            </trans-unit>
+
+            <trans-unit id="label.country">
+                <source>label.country</source>
+                <target>Kraj</target>
+            </trans-unit>
+
+            <trans-unit id="label.image">
+                <source>label.image</source>
+                <target>Obraz</target>
+            </trans-unit>
+
+            <trans-unit id="label.more">
+                <source>label.more</source>
+                <target>Więcej</target>
+            </trans-unit>
+
+            <trans-unit id="label.edit">
+                <source>label.edit</source>
+                <target>Edytuj</target>
+            </trans-unit>
+
+            <trans-unit id="label.delete">
+                <source>label.delete</source>
+                <target>Usuń</target>
+            </trans-unit>
+
+            <trans-unit id="action.view">
+                <source>action.view</source>
+                <target>Zobacz-teraz</target>
+            </trans-unit>
+
+            <trans-unit id="action.edit">
+                <source>action.edit</source>
+                <target>Edytuj-teraz</target>
+            </trans-unit>
+
+            <trans-unit id="action.delete">
+                <source>action.delete</source>
+                <target>Usuń-teraz</target>
+            </trans-unit>
+
+            <trans-unit id="title.movie_new">
+                <source>title.movie_new</source>
+                <target>Nowy film</target>
+            </trans-unit>
+
+            <trans-unit id="label.director">
+                <source>label.director</source>
+                <target>Reżyser</target>
+            </trans-unit>
+
+            <trans-unit id="label.screenwriter">
+                <source>label.screenwriter</source>
+                <target>Scenarzysta</target>
+            </trans-unit>
+
+            <trans-unit id="label.category">
+                <source>label.category</source>
+                <target>Kategoria</target>
+            </trans-unit>
+
+            <trans-unit id="action.save">
+                <source>action.save</source>
+                <target>Zapisz</target>
+            </trans-unit>
+
+            <trans-unit id="action.back_to_list">
+                <source>action.back_to_list</source>
+                <target>Powrót do listy</target>
+            </trans-unit>
+
+            <trans-unit id="title.movie_view">
+                <source>title.movie_view</source>
+                <target>Film</target>
+            </trans-unit>
+
+            <trans-unit id="action.new">
+                <source>action.new</source>
+                <target>Dodaj nowy film</target>
+            </trans-unit>
+
+            <trans-unit id="label.back">
+                <source>label.back</source>
+                <target>Powrót</target>
+            </trans-unit>
+
+            <trans-unit id="label.actors">
+                <source>label.actors</source>
+                <target>Aktorzy</target>
+            </trans-unit>
+
+            <trans-unit id="message.created_successfully">
+                <source>message.created_successfully</source>
+                <target>Dodano!</target>
+            </trans-unit>
+
+            <trans-unit id="message.updated_successfully">
+                <source>message.updated_successfully</source>
+                <target>Zaktualizowano!</target>
+            </trans-unit>
+
+            <trans-unit id="message.deleted_successfully">
+                <source>message.deleted_successfully</source>
+                <target>Usunięto!</target>
+            </trans-unit>
+
+            <trans-unit id="message.form_error">
+                <source>message.form_error</source>
+                <target>Błąd formularza</target>
+            </trans-unit>
+
+            <trans-unit id="message.item_not_found ">
+                <source>message.item_not_found y</source>
+                <target>Nie znaleziono elementu</target>
+            </trans-unit>
+
+            <trans-unit id="message.empty_list ">
+                <source>message.empty_list y</source>
+                <target>Pusta lista</target>
+            </trans-unit>
+
+            <trans-unit id="title.movie_edit">
+                <source>title.movie_edit</source>
+                <target>Edycja filmu</target>
+            </trans-unit>
+
+            <trans-unit id="title.movie_delete">
+                <source>title.movie_delete</source>
+                <target>Usuwanie filmu</target>
+            </trans-unit>
+
+            <trans-unit id="label.reviews">
+                <source>label.reviews</source>
+                <target>Recenzje</target>
+            </trans-unit>
+
+            <trans-unit id="label.review-content">
+                <source>label.review-content</source>
+                <target>Komentarz</target>
+            </trans-unit>
+
+            <trans-unit id="label.review-rate">
+                <source>label.review-rate</source>
+                <target>Ocena</target>
+            </trans-unit>
+
+            <trans-unit id="label.review-date">
+                <source>label.review-date</source>
+                <target>Data</target>
+            </trans-unit>
+
+            <trans-unit id="action.logout">
+                <source>action.logout</source>
+                <target>Wyloguj</target>
+            </trans-unit>
+
+            <trans-unit id="action.login">
+                <source>action.login</source>
+                <target>Zaloguj</target>
+            </trans-unit>
+
+            <trans-unit id="title.login">
+                <source>title.login</source>
+                <target>Login</target>
+            </trans-unit>
+
+            <trans-unit id="label.email">
+                <source>label.email</source>
+                <target>E-mail</target>
+            </trans-unit>
+
+            <trans-unit id="label.password">
+                <source>label.password</source>
+                <target>Hasło</target>
+            </trans-unit>
+
+            <trans-unit id="label.added">
+                <source>label.added</source>
+                <target>Dodane przez</target>
+            </trans-unit>
+
+            <trans-unit id="action.user_options">
+                <source>action.user_options</source>
+                <target>Opcje użytkownika</target>
+            </trans-unit>
+
+            <trans-unit id="action.admin_options">
+                <source>action.admin_options</source>
+                <target>Opcje admina</target>
+            </trans-unit>
+
+            <trans-unit id="action.movie_list">
+                <source>action.movie_list</source>
+                <target>Lista filmów</target>
+            </trans-unit>
+
+            <trans-unit id="label.review-author">
+                <source>label.review-author</source>
+                <target>Autor</target>
+            </trans-unit>
+
+            <trans-unit id="action.change_your_pass">
+                <source>action.change_your_pass</source>
+                <target>Zmień swoje hasło</target>
+            </trans-unit>
+
+            <trans-unit id="action.change_your_data">
+                <source>action.change_your_data</source>
+                <target>Zmień swoje dane</target>
+            </trans-unit>
+
+            <trans-unit id="message.empty_list">
+                <source>message.empty_list</source>
+                <target>Pusta lista</target>
+            </trans-unit>
+
+            <trans-unit id="action.register">
+                <source>action.register</source>
+                <target>Rejestracja</target>
+            </trans-unit>
+
+            <trans-unit id="label.review-delete">
+                <source>label.review-delete</source>
+                <target>Usuń komentarz</target>
+            </trans-unit>
+
+            <trans-unit id="action.delete_review">
+                <source>action.delete_review</source>
+                <target>Usuń</target>
+            </trans-unit>
+
+            <trans-unit id="title.user_list">
+                <source>title.user_list</source>
+                <target>Lista użytkowników</target>
+            </trans-unit>
+
+            <trans-unit id="label.firstName ">
+                <source>label.firstName</source>
+                <target>Imię</target>
+            </trans-unit>
+
+            <trans-unit id="label.city">
+                <source>label.city</source>
+                <target>Miasto</target>
+            </trans-unit>
+
+            <trans-unit id="label.age">
+                <source>label.age</source>
+                <target>Wiek</target>
+            </trans-unit>
+
+            <trans-unit id="label.change_pass">
+                <source>label.change_pass</source>
+                <target>Zmiana hasła</target>
+            </trans-unit>
+
+            <trans-unit id="label.change_data">
+                <source>label.change_data</source>
+                <target>Zmiana danych</target>
+            </trans-unit>
+
+            <trans-unit id="label.change_role">
+                <source>label.change_role</source>
+                <target>Zmiana uprawnień</target>
+            </trans-unit>
+
+            <trans-unit id="action.change_pass">
+                <source>action.change_pass</source>
+                <target>Zmień hasło</target>
+            </trans-unit>
+
+            <trans-unit id="action.grant_role_admin">
+                <source>action.grant_role_admin</source>
+                <target>Nadaj uprawnienia admina</target>
+            </trans-unit>
+
+            <trans-unit id="action.delete_user">
+                <source>action.delete_user</source>
+                <target>Usuń użytkownika</target>
+            </trans-unit>
+
+            <trans-unit id="title.admin_movie_list">
+                <source>title.admin_movie_list</source>
+                <target>Admin lista filmów</target>
+            </trans-unit>
+
+            <trans-unit id="action.users_list">
+                <source>action.users_list</source>
+                <target>Lista użytkowników</target>
+            </trans-unit>
+
+            <trans-unit id="action.add_photo">
+                <source>action.add_photo</source>
+                <target>Dodaj zdjęcie</target>
+            </trans-unit>
+
+            <trans-unit id="action.delete_photo">
+                <source>action.delete_photo</source>
+                <target>Usuń zdjęcie</target>
+            </trans-unit>
+
+            <trans-unit id="action.add_review">
+                <source>action.add_review</source>
+                <target>Dodaj komentarz</target>
+            </trans-unit>
+
+            <trans-unit id="action.change_data">
+                <source>action.change_data</source>
+                <target>Zmień dane</target>
+            </trans-unit>
+
+            <trans-unit id="message.item_not_found">
+                <source>message.item_not_found</source>
+                <target>Nie znaleziono</target>
+            </trans-unit>
+
+
+        </body>
+    </file>
+</xliff>

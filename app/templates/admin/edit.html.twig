@@ -1,0 +1,9 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'title.movie_edit',
+    page_title_param: {'%id%': movie.id},
+    attr: {
+        method: 'PUT',
+        action: url('admin_edit', {'id': movie.id}),
+    },
+    back_to_list_path: 'admin_index',
+} %}

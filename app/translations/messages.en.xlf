@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+
+            <trans-unit id="label.id">
+                <source>label.id</source>
+                <target>Id</target>
+            </trans-unit>
+
+            <trans-unit id="label.title">
+                <source>label.title</source>
+                <target>Title</target>
+            </trans-unit>
+
+            <trans-unit id="title.movie_list">
+                <source>title.movie_list</source>
+                <target>Movie list</target>
+            </trans-unit>
+
+            <trans-unit id="label.year">
+                <source>label.year</source>
+                <target>Year</target>
+            </trans-unit>
+
+            <trans-unit id="label.rate">
+                <source>label.rate</source>
+                <target>Rate</target>
+            </trans-unit>
+
+            <trans-unit id="label.boxoffice ">
+                <source>label.boxoffice</source>
+                <target>Boxoffice</target>
+            </trans-unit>
+
+            <trans-unit id="label.country">
+                <source>label.country</source>
+                <target>Country</target>
+            </trans-unit>
+
+            <trans-unit id="label.image">
+                <source>label.image</source>
+                <target>Image</target>
+            </trans-unit>
+
+            <trans-unit id="label.more">
+                <source>label.more</source>
+                <target>More</target>
+            </trans-unit>
+
+            <trans-unit id="label.edit">
+                <source>label.edit</source>
+                <target>Edit</target>
+            </trans-unit>
+
+            <trans-unit id="label.delete">
+                <source>label.delete</source>
+                <target>Delete</target>
+            </trans-unit>
+
+            <trans-unit id="action.view">
+                <source>action.view</source>
+                <target>View-now</target>
+            </trans-unit>
+
+            <trans-unit id="action.edit">
+                <source>action.edit</source>
+                <target>Edit-now</target>
+            </trans-unit>
+
+            <trans-unit id="action.delete">
+                <source>action.delete</source>
+                <target>Delete-now</target>
+            </trans-unit>
+
+            <trans-unit id="title.movie_new">
+                <source>title.movie_new</source>
+                <target>New movie</target>
+            </trans-unit>
+
+            <trans-unit id="label.director">
+                <source>label.director</source>
+                <target>Director</target>
+            </trans-unit>
+
+            <trans-unit id="label.screenwriter">
+                <source>label.screenwriter</source>
+                <target>Screenwriter</target>
+            </trans-unit>
+
+            <trans-unit id="label.category">
+            <source>label.category</source>
+            <target>Category</target>
+        </trans-unit>
+
+            <trans-unit id="action.save">
+                <source>action.save</source>
+                <target>Save</target>
+            </trans-unit>
+
+            <trans-unit id="action.back_to_list">
+                <source>action.back_to_list</source>
+                <target>Back to list</target>
+            </trans-unit>
+
+            <trans-unit id="title.movie_view">
+                <source>title.movie_view</source>
+                <target>Movie</target>
+            </trans-unit>
+
+            <trans-unit id="action.new">
+                <source>action.new</source>
+                <target>New movie</target>
+            </trans-unit>
+
+            <trans-unit id="label.back">
+                <source>label.back</source>
+                <target>Back</target>
+            </trans-unit>
+
+            <trans-unit id="label.actors">
+                <source>label.actors</source>
+                <target>Actors</target>
+            </trans-unit>
+
+            <trans-unit id="message.created_successfully">
+                <source>message.created_successfully</source>
+                <target>Created!</target>
+            </trans-unit>
+
+            <trans-unit id="message.updated_successfully">
+                <source>message.updated_successfully</source>
+                <target>Updated!</target>
+            </trans-unit>
+
+            <trans-unit id="message.deleted_successfully">
+                <source>message.deleted_successfully</source>
+                <target>Deleted!</target>
+            </trans-unit>
+
+            <trans-unit id="message.form_error">
+                <source>message.form_error</source>
+                <target>Form error</target>
+            </trans-unit>
+
+            <trans-unit id="message.item_not_found">
+                <source>message.item_not_found</source>
+                <target>Item not found</target>
+            </trans-unit>
+
+            <trans-unit id="message.empty_list">
+                <source>message.empty_list</source>
+                <target>Empty list</target>
+            </trans-unit>
+
+            <trans-unit id="title.movie_edit">
+                <source>title.movie_edit</source>
+                <target>Movie edit</target>
+            </trans-unit>
+
+            <trans-unit id="title.movie_delete">
+                <source>title.movie_delete</source>
+                <target>Movie delete</target>
+            </trans-unit>
+
+            <trans-unit id="label.reviews">
+                <source>label.reviews</source>
+                <target>Reviews</target>
+            </trans-unit>
+
+            <trans-unit id="label.review-content">
+                <source>label.review-content</source>
+                <target>Content</target>
+            </trans-unit>
+
+            <trans-unit id="label.review-rate">
+                <source>label.review-rate</source>
+                <target>Rate</target>
+            </trans-unit>
+
+            <trans-unit id="label.review-date">
+                <source>label.review-date</source>
+                <target>Date</target>
+            </trans-unit>
+
+            <trans-unit id="action.logout">
+                <source>action.logout</source>
+                <target>Logout</target>
+            </trans-unit>
+
+            <trans-unit id="action.login">
+                <source>action.login</source>
+                <target>Sign in </target>
+            </trans-unit>
+
+            <trans-unit id="title.login">
+                <source>title.login</source>
+                <target>Login</target>
+            </trans-unit>
+
+            <trans-unit id="label.email">
+                <source>label.email</source>
+                <target>E-mail</target>
+            </trans-unit>
+
+            <trans-unit id="label.password">
+                <source>label.password</source>
+                <target>Password</target>
+            </trans-unit>
+
+            <trans-unit id="label.added">
+                <source>label.added</source>
+                <target>Added by</target>
+            </trans-unit>
+
+            <trans-unit id="action.user_options">
+                <source>action.user_options</source>
+                <target>User options</target>
+            </trans-unit>
+
+            <trans-unit id="action.admin_options">
+                <source>action.admin_options</source>
+                <target>Admin options</target>
+            </trans-unit>
+
+            <trans-unit id="action.movie_list">
+                <source>action.movie_list</source>
+                <target>Movie list</target>
+            </trans-unit>
+
+            <trans-unit id="label.review-author">
+                <source>label.review-author</source>
+                <target>Author</target>
+            </trans-unit>
+
+            <trans-unit id="action.change_your_pass">
+                <source>action.change_your_pass</source>
+                <target>Change your password</target>
+            </trans-unit>
+
+            <trans-unit id="action.change_your_data">
+                <source>action.change_your_data</source>
+                <target>Change your data</target>
+            </trans-unit>
+
+            <trans-unit id="action.register">
+                <source>action.register</source>
+                <target>Register</target>
+            </trans-unit>
+
+            <trans-unit id="label.review-delete">
+                <source>label.review-delete</source>
+                <target>Delete review</target>
+            </trans-unit>
+
+            <trans-unit id="action.delete_review">
+                <source>action.delete_review</source>
+                <target>Delete review</target>
+            </trans-unit>
+
+            <trans-unit id="title.user_list">
+                <source>title.user_list</source>
+                <target>User list</target>
+            </trans-unit>
+
+            <trans-unit id="label.firstName ">
+                <source>label.firstName</source>
+                <target>First name</target>
+            </trans-unit>
+
+            <trans-unit id="label.city">
+                <source>label.city</source>
+                <target>City</target>
+            </trans-unit>
+
+            <trans-unit id="label.age">
+                <source>label.age</source>
+                <target>Age</target>
+            </trans-unit>
+
+            <trans-unit id="label.change_pass">
+                <source>label.change_pass</source>
+                <target>Change password</target>
+            </trans-unit>
+
+            <trans-unit id="label.change_data">
+                <source>label.change_data</source>
+                <target>Change data</target>
+            </trans-unit>
+
+            <trans-unit id="label.change_role">
+                <source>label.change_role</source>
+                <target>Change role</target>
+            </trans-unit>
+
+            <trans-unit id="action.change_pass">
+                <source>action.change_pass</source>
+                <target>Change password</target>
+            </trans-unit>
+
+            <trans-unit id="action.grant_role_admin">
+                <source>action.grant_role_admin</source>
+                <target>Grant role admin</target>
+            </trans-unit>
+
+            <trans-unit id="action.delete_user">
+                <source>action.delete_user</source>
+                <target>Delete user</target>
+            </trans-unit>
+
+            <trans-unit id="title.admin_movie_list">
+                <source>title.admin_movie_list</source>
+                <target>Admin movie list</target>
+            </trans-unit>
+
+            <trans-unit id="action.users_list">
+                <source>action.users_list</source>
+                <target>List of users</target>
+            </trans-unit>
+
+            <trans-unit id="action.add_photo">
+                <source>action.add_photo</source>
+                <target>Add photo</target>
+            </trans-unit>
+
+            <trans-unit id="action.delete_photo">
+                <source>action.delete_photo</source>
+                <target>Delete photo</target>
+            </trans-unit>
+
+            <trans-unit id="action.add_review">
+                <source>action.add_review</source>
+                <target>Add review</target>
+            </trans-unit>
+
+            <trans-unit id="action.change_data">
+                <source>action.change_data</source>
+                <target>Change data</target>
+            </trans-unit>
+
+
+
+        </body>
+    </file>
+</xliff>

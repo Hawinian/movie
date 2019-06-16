@@ -1,0 +1,8 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'title.review_new',
+    attr: {
+        method: 'POST',
+        action: url('review_new', {id: movie.id})
+    },
+    back_to_list_path: 'movie_index'
+} %}

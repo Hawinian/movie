@@ -1,0 +1,9 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'title.review_delete',
+    page_title_param: {'%id%': review.id},
+    attr: {
+        method: 'DELETE',
+        action: url('review_delete', {'id': review.id}),
+    },
+    back_to_list_path: 'admin_index',
+} %}
