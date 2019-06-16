@@ -26,10 +26,10 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/Form/MovieType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="531">
               <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="e#51#75#0#PHP" expanded="true" />
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/Entity/Movie.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2552">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="223">
+              <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -132,7 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/templates/user/index.html.twig" />
         <option value="$PROJECT_DIR$/app/templates/admin/index.html.twig" />
         <option value="$PROJECT_DIR$/app/src/Form/ReviewType.php" />
         <option value="$PROJECT_DIR$/app/templates/user/review.html.twig" />
@@ -183,6 +182,7 @@
         <option value="$PROJECT_DIR$/app/src/Repository/UserRepository.php" />
         <option value="$PROJECT_DIR$/app/src/EventListener/PhotoUploadListener.php" />
         <option value="$PROJECT_DIR$/app/src/Controller/AdminController.php" />
+        <option value="$PROJECT_DIR$/app/src/Entity/Movie.php" />
       </list>
     </option>
   </component>
@@ -414,7 +414,7 @@
       <workItem from="1560604100587" duration="6978000" />
       <workItem from="1560675727480" duration="5332000" />
       <workItem from="1560695272619" duration="3053000" />
-      <workItem from="1560703806943" duration="3600000" />
+      <workItem from="1560703806943" duration="3873000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1558973835004</created>
@@ -441,7 +441,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185314000" />
+    <option name="totallyTimeSpent" value="185587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="2560" height="1520" extended-state="6" />
@@ -823,13 +823,6 @@
     <entry file="file://$PROJECT_DIR$/app/templates/default/_form.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Entity/Movie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2552">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/default/_single_flash_message.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -876,11 +869,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Form/MovieType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="531">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="e#51#75#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Entity/Movie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
         </state>
       </provider>
     </entry>
