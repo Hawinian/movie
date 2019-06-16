@@ -29,7 +29,9 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/gedmo/doctrine-extensions" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/jdorn/sql-formatter" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/knplabs/knp-components" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/knplabs/knp-markdown-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/knplabs/knp-paginator-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/michelf/php-markdown" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/ocramius/package-versions" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/ocramius/proxy-manager" />
@@ -65,6 +67,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/intl" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/maker-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/orm-pack" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-apcu" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-intl-icu" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-mbstring" />
@@ -72,6 +75,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/property-access" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/security" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/security-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/stopwatch" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/twig-bridge" />
