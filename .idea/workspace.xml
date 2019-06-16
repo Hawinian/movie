@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3c10f19-c7fd-42e1-a68e-8ca30b388001" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/movie_base.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movie_base.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.php_cs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.php_cs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app" beforeDir="false" afterPath="$PROJECT_DIR$/app" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/Controller/PhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/PhotoController.php" afterDir="false" />
@@ -167,6 +164,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -453,7 +451,7 @@
       <workItem from="1560604100587" duration="6978000" />
       <workItem from="1560675727480" duration="5332000" />
       <workItem from="1560695272619" duration="3053000" />
-      <workItem from="1560703806943" duration="239000" />
+      <workItem from="1560703806943" duration="2662000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1558973835004</created>
@@ -473,7 +471,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181953000" />
+    <option name="totallyTimeSpent" value="184376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="2560" height="1520" extended-state="6" />
@@ -489,9 +487,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32967892" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49777237" visible="true" weight="0.28974158" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49777237" visible="true" weight="0.19968677" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5022276" side_tool="true" weight="0.29130775" />
       <window_info anchor="bottom" id="Regex Tester" order="12" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32967892" />
