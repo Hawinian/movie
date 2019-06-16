@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3c10f19-c7fd-42e1-a68e-8ca30b388001" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app" beforeDir="false" afterPath="$PROJECT_DIR$/app" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/PhotoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/PhotoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/ReviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/CountryFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/DataFixtures/CountryFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/DirectorFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/DataFixtures/DirectorFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/DataFixtures/ReviewFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/DataFixtures/ReviewFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Entity/UserData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Entity/UserData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/EventListener/PhotoUploadListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/EventListener/PhotoUploadListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/GrantAdminType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Form/GrantAdminType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/MovieType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Form/MovieType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/UserDataType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Form/UserDataType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/UserPassType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Form/UserPassType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/ActorRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Repository/ActorRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Repository/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/CountryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Repository/CountryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/DirectorRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Repository/DirectorRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/ScreenwriterRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Repository/ScreenwriterRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/UserDataRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Repository/UserDataRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Repository/UserRepository.php" afterDir="false" />
-    </list>
+    <list default="true" id="f3c10f19-c7fd-42e1-a68e-8ca30b388001" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +41,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-155" />
+            <state relative-caret-position="551">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -373,6 +349,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/vendor/symfony/filesystem" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -451,7 +428,7 @@
       <workItem from="1560604100587" duration="6978000" />
       <workItem from="1560675727480" duration="5332000" />
       <workItem from="1560695272619" duration="3053000" />
-      <workItem from="1560703806943" duration="2662000" />
+      <workItem from="1560703806943" duration="2993000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1558973835004</created>
@@ -467,11 +444,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558974081880</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Init commit">
+      <created>1560706607787</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1560706607787</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184376000" />
+    <option name="totallyTimeSpent" value="184707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="2560" height="1520" extended-state="6" />
@@ -489,7 +473,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32967892" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49777237" visible="true" weight="0.19968677" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49777237" visible="true" weight="0.30227095" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5022276" side_tool="true" weight="0.29130775" />
       <window_info anchor="bottom" id="Regex Tester" order="12" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32967892" />
@@ -906,7 +890,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155" />
+        <state relative-caret-position="551">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
