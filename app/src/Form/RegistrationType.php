@@ -5,7 +5,6 @@
 
 namespace App\Form;
 
-use App\Entity\User;
 use App\Entity\UserData;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -50,11 +49,13 @@ class RegistrationType extends AbstractType
                 'attr' => ['max_length' => 45],
             ]
         );
+
         $builder->add(
             'user',
             UserType::class,
             [
                 'label' => 'label.access_data',
+                'required' => true,
             ]
         );
     }

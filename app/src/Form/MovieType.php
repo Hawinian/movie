@@ -6,10 +6,7 @@
 namespace App\Form;
 
 use App\Entity\Category;
-use App\Entity\Country;
-use App\Entity\Director;
 use App\Entity\Movie;
-use App\Entity\Screenwriter;
 use App\Form\DataTransformer\CountryDataTransformer;
 use App\Form\DataTransformer\DirectorDataTransformer;
 use App\Form\DataTransformer\ScreenwriterDataTransformer;

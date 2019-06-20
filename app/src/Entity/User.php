@@ -74,7 +74,6 @@ namespace App\Entity {
          *     min="6",
          *     max="255",
          * )
-         *
          */
         private $password;
 
