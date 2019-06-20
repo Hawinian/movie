@@ -26,7 +26,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
- * Class UserController.
+ * Class AdminController.
  *
  * @Route("/admin")
  *
@@ -194,7 +194,7 @@ class AdminController extends AbstractController
     public function users(Request $request, UserRepository $repository, PaginatorInterface $paginator): Response
     {
         $pagination = $paginator->paginate(
-            $repository->queryByNotAdmin(),
+            $repository->queryAll(),
             $request->query->getInt('page', 1),
             User::NUMBER_OF_ITEMS
         );
@@ -361,10 +361,14 @@ class AdminController extends AbstractController
      *     name="admin_delete_user",
      * )
      * @IsGranted("ROLE_ADMIN")
+     * @IsGranted(
+     *     "MANAGE",
+     *     subject="user",
+     *     )
      */
     public function deleteUser(Request $request, User $user, UserRepository $userrepository): Response
     {
-        $form = $this->createForm(FormType::class, $user, ['method' => 'DELETE']);
+        $form = $this->createForm(FormType::class, $user->getEmail(), ['method' => 'DELETE']);
         $form->handleRequest($request);
 
         if ($request->isMethod('DELETE') && !$form->isSubmitted()) {
@@ -372,12 +376,8 @@ class AdminController extends AbstractController
         }
 
         if ($form->isSubmitted() && $form->isValid()) {
-            if (array_key_exists('ROLE_ADMIN', $user->getRoles())) {
-                $this->addFlash('danger', 'message.deleted_unsuccessfully');
-            } else {
-                $userrepository->deleteUser($user);
-                $this->addFlash('success', 'message.deleted_successfully');
-            }
+            $userrepository->deleteUser($user);
+            $this->addFlash('success', 'message.deleted_successfully');
 
             return $this->redirectToRoute('admin_users');
         }

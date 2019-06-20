@@ -13,7 +13,6 @@ use Doctrine\Common\Persistence\ObjectManager;
  */
 class CategoryFixtures extends AbstractBaseFixtures
 {
-
     /**
      * Load data.
      *
@@ -21,14 +20,12 @@ class CategoryFixtures extends AbstractBaseFixtures
      */
     public function loadData(ObjectManager $manager): void
     {
-
         $this->createMany(10, 'category', function () {
             $category = new Category();
             $category->setName($this->faker->word);
 
             return $category;
         });
-
 
         $manager->flush();
     }

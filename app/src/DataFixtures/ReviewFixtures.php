@@ -14,7 +14,6 @@ use Doctrine\Common\Persistence\ObjectManager;
  */
 class ReviewFixtures extends AbstractBaseFixtures implements DependentFixtureInterface
 {
-
     /**
      * Load.
      *
@@ -29,7 +28,6 @@ class ReviewFixtures extends AbstractBaseFixtures implements DependentFixtureInt
             $review->setRate($this->faker->numberBetween($min = 1, $max = 10));
             $review->setAuthor($this->getRandomReference('user'));
             $review->setMovie($this->getRandomReference('movie'));
-
 
             return $review;
         });

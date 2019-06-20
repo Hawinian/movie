@@ -1,4 +1,5 @@
 <?php
+
 /** Category Repository */
 
 namespace App\Repository;
@@ -17,6 +18,7 @@ class CategoryRepository extends ServiceEntityRepository
 {
     /**
      * CategoryRepository constructor.
+     *
      * @param RegistryInterface $registry
      */
     public function __construct(RegistryInterface $registry)

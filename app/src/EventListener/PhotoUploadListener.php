@@ -25,14 +25,16 @@ class PhotoUploadListener
      * @var FileUploader|null
      */
     protected $uploaderService = null;
+    protected $filesystem = null;
 
     /**
      * PhotoUploadListener constructor.
      *
      * @param FileUploader $fileUploader File uploader service
      */
-    public function __construct(FileUploader $fileUploader)
+    public function __construct(FileUploader $fileUploader, Filesystem $filesystem)
     {
+        $this->filesystem = $filesystem;
         $this->uploaderService = $fileUploader;
     }
 
@@ -131,10 +133,9 @@ class PhotoUploadListener
             return;
         }
 
-      /*  $file = $entity->getFile();
+        $file = $entity->getFile();
         if ($file instanceof File) {
-            $filesystem = new Filesystem();
-            $this->$filesystem->remove($file->getPathname());
-        }*/
+            $this->filesystem->remove($file->getPathname());
+        }
     }
 }

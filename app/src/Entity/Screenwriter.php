@@ -2,6 +2,7 @@
 /**
  * Screenwriter entity.
  */
+
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;

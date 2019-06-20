@@ -23,11 +23,12 @@ class UserPassType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('password', RepeatedType::class, array(
+        $builder->add('password', RepeatedType::class, [
             'type' => PasswordType::class,
-            'first_options' => array('label' => 'Password'),
-            'second_options' => array('label' => 'Repeat Password'),
-        ));
+            'first_options' => ['label' => 'label.Password'],
+            'second_options' => ['label' => 'label.Repeat_Password'],
+            'options' => ['attr' => ['min_length' => 6, 'max_length' => 25]],
+        ]);
     }
 
     /**
@@ -35,8 +36,8 @@ class UserPassType extends AbstractType
      */
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'data_class' => User::class,
-        ));
+        ]);
     }
 }

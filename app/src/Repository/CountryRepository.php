@@ -6,6 +6,8 @@ namespace App\Repository;
 
 use App\Entity\Country;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -18,11 +20,40 @@ class CountryRepository extends ServiceEntityRepository
 {
     /**
      * CountryRepository constructor.
+     *
      * @param RegistryInterface $registry
      */
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Country::class);
+    }
+
+    /**
+     * Save record.
+     *
+     * @param Country $country
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function save(Country $country): void
+    {
+        $this->_em->persist($country);
+        $this->_em->flush($country);
+    }
+
+    /**
+     * Delete record.
+     *
+     * @param Country $country
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function delete(Country $country): void
+    {
+        $this->_em->remove($country);
+        $this->_em->flush($country);
     }
 
     // /**

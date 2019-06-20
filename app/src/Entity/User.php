@@ -2,13 +2,14 @@
 /**
  * User entity.
  */
+
 namespace App\Entity {
     use Doctrine\ORM\Mapping as ORM;
     use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
     use Symfony\Component\Security\Core\User\UserInterface;
-    use Symfony\Component\Security\Core\Validator\Constraints as SecurityAssert;
     use Symfony\Component\Validator\Constraints as Assert;
     use Doctrine\Common\Collections\ArrayCollection;
+    use Symfony\Component\Security\Core\Validator\Constraints as SecurityAssert;
 
     /**
      * Class User.
@@ -69,7 +70,12 @@ namespace App\Entity {
          * @ORM\Column(type="string", length=255)
          *
          * @Assert\NotBlank
+         * @Assert\Length(
+         *     min="6",
+         *     max="255",
+         * )
          *
+         * @SecurityAssert\UserPassword(groups={"Password"})
          */
         private $password;
 
@@ -109,7 +115,6 @@ namespace App\Entity {
         {
             return $this->id;
         }
-
 
         /**
          * Getter for the Password.
@@ -169,8 +174,8 @@ namespace App\Entity {
             $this->userdata = $userdata;
 
             // set the owning side of the relation if necessary
-            if ($this !== $userdata->getUserData()) {
-                $userdata->setUserData($this);
+            if ($this !== $userdata->getUser()) {
+                $userdata->setUser($this);
             }
 
             return $this;

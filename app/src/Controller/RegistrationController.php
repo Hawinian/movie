@@ -7,8 +7,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Entity\UserData;
-use App\Form\UserDataType;
-use App\Form\UserType;
+use App\Form\RegistrationType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -37,29 +36,25 @@ class RegistrationController extends AbstractController
         }
         $user = new User();
         $userdata = new UserData();
-        $form1 = $this->createForm(UserType::class, $user);
-        $form2 = $this->createForm(UserDataType::class, $userdata);
+        $form = $this->createForm(RegistrationType::class, $userdata);
         if ($request->isMethod('POST')) {
-            $form1->handleRequest($request);
-            $form2->handleRequest($request);
+            $form->handleRequest($request);
 
-            if ($form1->isSubmitted()) {
+            if ($form->isSubmitted()) {
                 $user->setPassword(
                     $passwordEncoder->encodePassword(
                         $user,
-                        $form1->get('password')->getData()
+                        $form->get('user')->get('password')->getData()
                     )
                 );
-                $userdata->setUserData($user);
-            }
-            if ($form2->isSubmitted()) {
-                //Handle
+                $user->setEmail($form->get('user')->get('email')->getData());
+                $user->setUserData($userdata);
             }
 
             $user->setRoles(['ROLE_USER']);
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($user);
             $entityManager->persist($userdata);
+            $entityManager->persist($user);
             $entityManager->flush();
 
             $this->addFlash('success', 'message.registered_successfully');
@@ -68,8 +63,7 @@ class RegistrationController extends AbstractController
         }
 
         return $this->render('registration/register.html.twig', [
-            'form1' => $form1->createView(),
-            'form2' => $form2->createView(),
+            'form' => $form->createView(),
         ]);
     }
 }

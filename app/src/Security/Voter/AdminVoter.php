@@ -1,11 +1,10 @@
 <?php
 /**
- * Movie voter.
+ * Admin voter.
  */
 
 namespace App\Security\Voter;
 
-use App\Entity\Movie;
 use App\Entity\User;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\Voter;
@@ -15,7 +14,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * Class MovieVoter.
  */
-class MovieVoter extends Voter
+class AdminVoter extends Voter
 {
     /**
      * Security helper.
@@ -45,7 +44,7 @@ class MovieVoter extends Voter
     protected function supports($attribute, $subject)
     {
         return in_array($attribute, ['MANAGE'])
-            && $subject instanceof Movie;
+            && $subject instanceof User;
     }
 
     /**
@@ -69,15 +68,15 @@ class MovieVoter extends Voter
         // ... (check conditions and return true to grant permission) ...
         switch ($attribute) {
             case 'MANAGE':
-                if ($subject->getAuthor() === $user) {
-                    return true;
+                if ($subject === $user) {
+                    return false;
                 }
                 break;
             default:
-                return false;
+                return true;
                 break;
         }
 
-        return false;
+        return true;
     }
 }

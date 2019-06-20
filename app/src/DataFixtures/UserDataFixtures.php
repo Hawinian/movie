@@ -26,7 +26,7 @@ class UserDataFixtures extends AbstractBaseFixtures implements DependentFixtureI
             $userData->setFirstName($this->faker->firstName);
             $userData->setCity($this->faker->city);
             $userData->setAge($this->faker->numberBetween($min = 20, $max = 90));
-            $userData->setUserData($this->getReference('user_'.$i));
+            $userData->setUser($this->getReference('user_'.$i));
 
             return $userData;
         });
@@ -36,7 +36,7 @@ class UserDataFixtures extends AbstractBaseFixtures implements DependentFixtureI
             $userData->setFirstName($this->faker->firstName);
             $userData->setCity($this->faker->city);
             $userData->setAge($this->faker->numberBetween($min = 20, $max = 90));
-            $userData->setUserData($this->getReference('admin_'.$i));
+            $userData->setUser($this->getReference('admin_'.$i));
 
             return $userData;
         });

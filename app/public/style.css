@@ -1,0 +1,48 @@
+/*
+.table-striped tbody tr:nth-of-type(2n+1)
+{
+background-color: rgba(0,0,0,.05)
+}
+
+body
+{
+    background-color: lightblue;
+   color: #4E4E50;
+}
+
+a
+{
+    color: #4E4E50;
+}
+
+.navigation text-center
+{
+    text-decoration-color:green;
+}
+
+.pagination a {
+    color: #C3073F;
+
+}
+
+.pagination body
+{
+    color: #6F2232;
+}
+
+.table
+{
+    color: #0b2e13;
+}
+
+.page-item
+{
+    color: black;
+}
+
+.page-link
+{
+    background-color: black;
+}
+
+ */

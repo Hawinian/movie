@@ -16,7 +16,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class MovieController.
- *
  */
 class MovieController extends AbstractController
 {

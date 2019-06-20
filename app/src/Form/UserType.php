@@ -36,11 +36,13 @@ class UserType extends AbstractType
             ->add(
                 'password',
                 RepeatedType::class,
-                array(
+                [
                 'type' => PasswordType::class,
-                'first_options' => array('label' => 'label.Password'),
-                'second_options' => array('label' => 'label.Repeat Password'),
-                )
+                'first_options' => ['label' => 'label.Password'],
+                'second_options' => ['label' => 'label.Repeat Password'],
+                    'options' => ['attr' => ['min_length' => 6, 'max_length' => 25],
+                    ],
+                ]
             );
     }
 
@@ -49,8 +51,8 @@ class UserType extends AbstractType
      */
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'data_class' => User::class,
-        ));
+        ]);
     }
 }

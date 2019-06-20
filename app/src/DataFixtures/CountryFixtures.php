@@ -24,7 +24,6 @@ class CountryFixtures extends AbstractBaseFixtures
             $country = new Country();
             $country->setName($this->faker->country);
 
-
             return $country;
         });
 

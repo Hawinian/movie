@@ -15,7 +15,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 /**
  * Class UserType.
  */
-class UserDataType extends AbstractType
+class RegistrationType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -49,6 +49,13 @@ class UserDataType extends AbstractType
                 'attr' => ['max_length' => 128],
             ]
         );
+        $builder->add(
+            'user',
+            UserType::class,
+            [
+                'label' => 'label.access_data',
+            ]
+        );
     }
 
     /**
@@ -58,6 +65,8 @@ class UserDataType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => UserData::class,
+
+            'validation_groups' => ['Default', 'Password'],
         ]);
     }
 }

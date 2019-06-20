@@ -2,6 +2,7 @@
 /**
  * UserData entity.
  */
+
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -90,7 +91,7 @@ class UserData
     /**
      * @return User|null
      */
-    public function getUserData(): ?User
+    public function getUser(): ?User
     {
         return $this->user;
     }
@@ -100,7 +101,7 @@ class UserData
      *
      * @return UserData
      */
-    public function setUserData(User $user): self
+    public function setUser(User $user): self
     {
         $this->user = $user;
 

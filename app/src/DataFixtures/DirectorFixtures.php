@@ -24,7 +24,6 @@ class DirectorFixtures extends AbstractBaseFixtures
             $director = new Director();
             $director->setName($this->faker->name);
 
-
             return $director;
         });
 

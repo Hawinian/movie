@@ -2,6 +2,7 @@
 /**
  * Review entity.
  */
+
 namespace App\Entity;
 
 use DateTimeInterface;

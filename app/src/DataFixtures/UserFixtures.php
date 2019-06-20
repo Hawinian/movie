@@ -36,24 +36,20 @@ class UserFixtures extends AbstractBaseFixtures
      */
     public function loadData(ObjectManager $manager): void
     {
-        $this->createMany(15, 'user', function () {
-
+        $this->createMany(15, 'user', function ($i) {
             $user = new User();
-            $user->setEmail($this->faker->email);
+            $user->setEmail(sprintf('user%d@example.com', $i));
             $user->setPassword($this->passwordEncoder->encodePassword($user, 'user1234'));
             $user->setRoles(['ROLE_USER']);
-
 
             return $user;
         });
 
-        $this->createMany(4, 'admin', function () {
-
+        $this->createMany(4, 'admin', function ($i) {
             $user = new User();
-            $user->setEmail($this->faker->email);
-            $user->setPassword($this->passwordEncoder->encodePassword($user, 'admin1234'));
+            $user->setEmail(sprintf('admin%d@example.com', $i));
+            $user->setPassword($this->passwordEncoder->encodePassword($user, 'adminadmin'));
             $user->setRoles(['ROLE_USER', 'ROLE_ADMIN']);
-
 
             return $user;
         });

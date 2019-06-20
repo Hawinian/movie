@@ -41,6 +41,12 @@ namespace App\Entity {
 
         /**
          * @ORM\Column(type="string", length=128)
+         *
+         * @Assert\NotBlank
+         * @Assert\Length(
+         *     min="3",
+         *     max="64",
+         * )
          */
         private $title;
 
@@ -62,6 +68,10 @@ namespace App\Entity {
 
         /**
          * @ORM\Column(type="integer")
+         *
+         * * @Assert\LessThanOrEqual(
+         *     value = 3000000000
+         * )
          */
         private $boxoffice;
 
@@ -108,7 +118,7 @@ namespace App\Entity {
         private $code;
 
         /**
-         * @ORM\ManyToOne(targetEntity="App\Entity\Country", inversedBy="movies")
+         * @ORM\ManyToOne(targetEntity="App\Entity\Country", inversedBy="movies", cascade={"persist"})
          * @ORM\JoinColumn(nullable=false)
          */
         private $country;

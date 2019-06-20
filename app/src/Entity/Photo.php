@@ -57,7 +57,7 @@ class Photo implements Serializable
     private $file;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Movie", inversedBy="photo", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity="App\Entity\Movie", inversedBy="photo")
      */
     private $movie;
 

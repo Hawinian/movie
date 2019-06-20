@@ -1,4 +1,5 @@
 <?php
+
 /** Photo Repository */
 
 namespace App\Repository;
@@ -19,6 +20,7 @@ class PhotoRepository extends ServiceEntityRepository
 {
     /**
      * PhotoRepository constructor.
+     *
      * @param RegistryInterface $registry
      */
     public function __construct(RegistryInterface $registry)

@@ -120,6 +120,7 @@ abstract class AbstractBaseFixtures extends Fixture
 
     /**
      * @param string $groupName
+     *
      * @return object
      */
     protected function getOne(string $groupName): object

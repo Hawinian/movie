@@ -21,6 +21,7 @@ class ReviewRepository extends ServiceEntityRepository
 {
     /**
      * ReviewRepository constructor.
+     *
      * @param RegistryInterface $registry
      */
     public function __construct(RegistryInterface $registry)
@@ -46,6 +47,7 @@ class ReviewRepository extends ServiceEntityRepository
      * Delete record.
      *
      * @param Review $review
+     *
      * @throws ORMException
      * @throws OptimisticLockException
      */

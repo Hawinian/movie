@@ -1,10 +1,13 @@
 <?php
+
 /** Screenwriter Repository */
 
 namespace App\Repository;
 
 use App\Entity\Screenwriter;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -17,11 +20,40 @@ class ScreenwriterRepository extends ServiceEntityRepository
 {
     /**
      * ScreenwriterRepository constructor.
+     *
      * @param RegistryInterface $registry
      */
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Screenwriter::class);
+    }
+
+    /**
+     * Save record.
+     *
+     * @param Screenwriter $screenwriter
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function save(Screenwriter $screenwriter): void
+    {
+        $this->_em->persist($screenwriter);
+        $this->_em->flush($screenwriter);
+    }
+
+    /**
+     * Delete record.
+     *
+     * @param Screenwriter $screenwriter
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function delete(Screenwriter $screenwriter): void
+    {
+        $this->_em->remove($screenwriter);
+        $this->_em->flush($screenwriter);
     }
 
     // /**

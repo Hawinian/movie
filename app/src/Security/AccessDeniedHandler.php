@@ -22,7 +22,7 @@ class AccessDeniedHandler implements AccessDeniedHandlerInterface
     {
         // ...
 
-        $content ='Acces denied';
+        $content = 'Acces denied';
 
         return new Response($content, 403);
     }

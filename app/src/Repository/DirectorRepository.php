@@ -1,10 +1,13 @@
 <?php
+
 /** Director Repository */
 
 namespace App\Repository;
 
 use App\Entity\Director;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -17,11 +20,40 @@ class DirectorRepository extends ServiceEntityRepository
 {
     /**
      * DirectorRepository constructor.
+     *
      * @param RegistryInterface $registry
      */
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Director::class);
+    }
+
+    /**
+     * Save record.
+     *
+     * @param Director $director
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function save(Director $director): void
+    {
+        $this->_em->persist($director);
+        $this->_em->flush($director);
+    }
+
+    /**
+     * Delete record.
+     *
+     * @param Director $director
+     *
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
+    public function delete(Director $director): void
+    {
+        $this->_em->remove($director);
+        $this->_em->flush($director);
     }
 
     // /**

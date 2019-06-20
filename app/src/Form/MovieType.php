@@ -10,9 +10,13 @@ use App\Entity\Country;
 use App\Entity\Director;
 use App\Entity\Movie;
 use App\Entity\Screenwriter;
+use App\Form\DataTransformer\CountryDataTransformer;
+use App\Form\DataTransformer\DirectorDataTransformer;
+use App\Form\DataTransformer\ScreenwriterDataTransformer;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\RangeType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -29,15 +33,38 @@ class MovieType extends AbstractType
      * @var ActorsDataTransformer|null
      */
     private $actorsDataTransformer = null;
+    /**
+     * Country data transformer.
+     *
+     * @var CountryDataTransformer|null
+     */
+    private $countryDataTransformer = null;
+    /**
+     * Director data transformer.
+     *
+     * @var DirectorDataTransformer|null
+     */
+    private $directorDataTransformer = null;
+    /**
+     * Screenwriter data transformer.
+     *
+     * @var ScreenwriterDataTransformer|null
+     */
+    private $screenwriterDataTransformer = null;
 
     /**
      * MovieType constructor.
      *
-     * @param ActorsDataTransformer $actorsDataTransformer Actors data transformer
+     * @param ActorsDataTransformer   $actorsDataTransformer
+     * @param CountryDataTransformer  $countryDataTransformer
+     * @param DirectorDataTransformer $directorDataTransformer
      */
-    public function __construct(ActorsDataTransformer $actorsDataTransformer)
+    public function __construct(ActorsDataTransformer $actorsDataTransformer, CountryDataTransformer $countryDataTransformer, DirectorDataTransformer $directorDataTransformer, ScreenwriterDataTransformer $screenwriterDataTransformer)
     {
         $this->actorsDataTransformer = $actorsDataTransformer;
+        $this->countryDataTransformer = $countryDataTransformer;
+        $this->directorDataTransformer = $directorDataTransformer;
+        $this->screenwriterDataTransformer = $screenwriterDataTransformer;
     }
 
     /**
@@ -76,11 +103,14 @@ class MovieType extends AbstractType
 
         $builder->add(
             'rate',
-            NumberType::class,
+            RangeType::class,
             [
             'label' => 'label.rate',
             'required' => true,
-            'attr' => ['max_length' => 2],
+                'attr' => [
+                    'min' => 1,
+                    'max' => 10,
+                ],
             ]
         );
         $builder->add(
@@ -89,41 +119,42 @@ class MovieType extends AbstractType
             [
                     'label' => 'label.boxoffice',
                     'required' => true,
-                    'attr' => ['max_length' => 4],
+                    'attr' => [
+                    'max' => 3000000000,
+                    ],
                 ]
         );
 
-
         $builder->add(
             'country',
-            EntityType::class,
+            TextType::class,
             [
                 'label' => 'label.country',
                 'required' => true,
-                'class' => Country::class,
-                'choice_label' => 'name',
+                //'class' => Country::class,
+                //'choice_label' => 'name',
                 ]
         );
 
         $builder->add(
             'director',
-            EntityType::class,
+            TextType::class,
             [
                     'label' => 'label.director',
                     'required' => true,
-                    'class' => Director::class,
-                    'choice_label' => 'name',
+                    //'class' => Director::class,
+                   // 'choice_label' => 'name',
                 ]
         );
 
         $builder->add(
             'screenwriter',
-            EntityType::class,
+            TextType::class,
             [
                     'label' => 'label.screenwriter',
                     'required' => true,
-                    'class' => Screenwriter::class,
-                    'choice_label' => 'name',
+                  //  'class' => Screenwriter::class,
+                   // 'choice_label' => 'name',
                 ]
         );
 
@@ -152,6 +183,18 @@ class MovieType extends AbstractType
 
         $builder->get('actors')->addModelTransformer(
             $this->actorsDataTransformer
+        );
+
+        $builder->get('country')->addModelTransformer(
+            $this->countryDataTransformer
+        );
+
+        $builder->get('director')->addModelTransformer(
+            $this->directorDataTransformer
+        );
+
+        $builder->get('screenwriter')->addModelTransformer(
+            $this->screenwriterDataTransformer
         );
     }
 

@@ -45,8 +45,6 @@ class UserRepository extends ServiceEntityRepository
     /**
      * Query movies by author.
      *
-     * @param User|null $user User entity
-     *
      * @return QueryBuilder Query builder
      */
     public function queryByNotAdmin(): QueryBuilder

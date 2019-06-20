@@ -16,6 +16,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -116,15 +117,12 @@ class PhotoController extends AbstractController
         );
     }
 
-
     /**
      * Edit action.
      *
      * @param Request         $request
      * @param Photo           $photo
      * @param PhotoRepository $repository
-     *
-     *
      * @param Filesystem      $filesystem Filesystem component
      *
      * @return Response
@@ -153,6 +151,7 @@ class PhotoController extends AbstractController
 
             if ($formData->getFile() instanceof UploadedFile) {
                 $repository->save($photo);
+                /** @var File $file */
                 $file = $originalPhoto->getFile();
                 $filesystem->remove($file->getPathname());
             }
@@ -172,7 +171,6 @@ class PhotoController extends AbstractController
             ]
         );
     }
-
 
     /**
      * Delete action.
