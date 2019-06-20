@@ -15,9 +15,9 @@
 
             <dt>{{ 'label.image'|trans }}</dt>
             <dd>
-                {% if photo is defined and photo|length %}
+                {% if movie.photo is defined and movie.photo|length %}
                     <div>
-                        <img src="{{ asset('uploads/photos/'~ photo.file.filename) }}">
+                        <img src="{{ asset('uploads/photos/'~ movie.photo.file.filename) }}">
                     </div>
                 {% else %}
                     {% include 'default/_single_flash_message.html.twig' with {
@@ -70,6 +70,20 @@
                 {% endfor %} </dd>
 
             </table>
+            <div>
+                <form action="{{ url('photo_new', {id: movie.id}) }}">
+                    <input type="submit" value="{{ 'action.add_photo'|trans }}" />
+                </form><br>
+            </div>
+
+            {% if movie.photo is defined and movie.photo|length %}
+                <div>
+                    <form action="{{ url('photo_delete', {id: movie.photo.id}) }}">
+                        <input type="submit" value="{{ 'action.delete_photo'|trans }}" />
+                    </form><br>
+                </div>
+
+            {% endif %}
                 <dd>
                     <a href="{{ url('admin_index') }}" title="{{ 'label.back'|trans }}">
                         {{ 'label.back'|trans }}

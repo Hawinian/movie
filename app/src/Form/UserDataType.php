@@ -46,7 +46,7 @@ class UserDataType extends AbstractType
             [
                 'label' => 'label.city',
                 'required' => true,
-                'attr' => ['max_length' => 128],
+                'attr' => ['max_length' => 45],
             ]
         );
     }

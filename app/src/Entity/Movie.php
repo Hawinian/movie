@@ -45,7 +45,7 @@ namespace App\Entity {
          * @Assert\NotBlank
          * @Assert\Length(
          *     min="3",
-         *     max="64",
+         *     max="128",
          * )
          */
         private $title;
@@ -54,22 +54,31 @@ namespace App\Entity {
          * @ORM\Column(type="integer")
          *
          * @Assert\NotBlank
-         * @Assert\Length(
-         *     min="3",
-         *     max="4",
+         * @Assert\Type("integer")
+         * @Assert\Range(
+         *      min = 1890,
+         *      max = 2025,
          * )
          */
         private $year;
 
         /**
          * @ORM\Column(type="integer")
+         *
+         * @Assert\NotBlank
+         * @Assert\Range(
+         *      min = 1,
+         *      max = 10,
+         * )
          */
         private $rate;
 
         /**
          * @ORM\Column(type="integer")
          *
-         * * @Assert\LessThanOrEqual(
+         * @Assert\NotBlank
+         * @Assert\Type("integer")
+         * @Assert\LessThanOrEqual(
          *     value = 3000000000
          * )
          */
@@ -78,18 +87,26 @@ namespace App\Entity {
         /**
          * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="movies")
          * @ORM\JoinColumn(nullable=false)
+         *
+         * @Assert\NotBlank
          */
         private $category;
 
         /**
          * @ORM\ManyToOne(targetEntity="App\Entity\Screenwriter", inversedBy="movies")
          * @ORM\JoinColumn(nullable=false)
+         *
+         * @Assert\NotBlank
+         * @Assert\Valid()
          */
         private $screenwriter;
 
         /**
          * @ORM\ManyToOne(targetEntity="App\Entity\Director", inversedBy="movies")
          * @ORM\JoinColumn(nullable=false)
+         *
+         * @Assert\NotBlank
+         * @Assert\Valid()
          */
         private $director;
 
@@ -120,11 +137,16 @@ namespace App\Entity {
         /**
          * @ORM\ManyToOne(targetEntity="App\Entity\Country", inversedBy="movies", cascade={"persist"})
          * @ORM\JoinColumn(nullable=false)
+         *
+         * @Assert\NotBlank
+         * @Assert\Valid()
          */
         private $country;
 
         /**
          * @ORM\ManyToMany(targetEntity="App\Entity\Actor", inversedBy="movies")
+         *
+         * @Assert\Valid()
          */
         private $actors;
 

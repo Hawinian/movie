@@ -75,12 +75,13 @@ namespace App\Entity {
          *     max="255",
          * )
          *
-         * @SecurityAssert\UserPassword(groups={"Password"})
          */
         private $password;
 
         /**
          * @ORM\OneToOne(targetEntity="App\Entity\UserData", mappedBy="user", cascade={"persist", "remove"})
+         *
+         * @Assert\Valid()
          */
         private $userdata;
 

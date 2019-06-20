@@ -338,6 +338,80 @@
                 <target>Change data</target>
             </trans-unit>
 
+            <trans-unit id="title.user_register">
+                <source>title.user_register</source>
+                <target>Register</target>
+            </trans-unit>
+
+            <trans-unit id="label.access_data">
+                <source>label.access_data</source>
+                <target>Access data</target>
+            </trans-unit>
+
+            <trans-unit id="label.Password">
+                <source>label.Password</source>
+                <target>Password</target>
+            </trans-unit>
+
+            <trans-unit id="label.Repeat Password">
+                <source>label.Repeat_Password</source>
+                <target>Repeat Password</target>
+            </trans-unit>
+
+            <trans-unit id="title.password_edit">
+                <source>title.password_edit</source>
+                <target>Password edit</target>
+            </trans-unit>
+
+            <trans-unit id="title.data_edit">
+                <source>title.data_edit</source>
+                <target>Data edit</target>
+            </trans-unit>
+
+            <trans-unit id="title.grant_admin">
+                <source>title.grant_admin</source>
+                <target>Grant admin</target>
+            </trans-unit>
+
+            <trans-unit id="title.review_new">
+                <source>title.review_new</source>
+                <target>New review</target>
+            </trans-unit>
+
+            <trans-unit id="label.content">
+                <source>label.content</source>
+                <target>Content</target>
+            </trans-unit>
+
+            <trans-unit id="label.photo">
+                <source>label.photo</source>
+                <target>Photo</target>
+            </trans-unit>
+
+            <trans-unit id="title.photo_delete">
+                <source>title.photo_delete</source>
+                <target>Photo delete</target>
+            </trans-unit>
+
+            <trans-unit id="title.photo_new">
+                <source>title.photo_new</source>
+                <target>Photo new</target>
+            </trans-unit>
+
+            <trans-unit id="text.Hello">
+                <source>text.Hello</source>
+                <target>Hello</target>
+            </trans-unit>
+
+            <trans-unit id="title.review_delete">
+                <source>title.review_delete</source>
+                <target>Review delete</target>
+            </trans-unit>
+
+            <trans-unit id="message.registered_successfully">
+                <source>message.registered_successfully</source>
+                <target>Registered!</target>
+            </trans-unit>
 
 
         </body>

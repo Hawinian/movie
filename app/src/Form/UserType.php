@@ -39,7 +39,7 @@ class UserType extends AbstractType
                 [
                 'type' => PasswordType::class,
                 'first_options' => ['label' => 'label.Password'],
-                'second_options' => ['label' => 'label.Repeat Password'],
+                'second_options' => ['label' => 'label.Repeat_Password'],
                     'options' => ['attr' => ['min_length' => 6, 'max_length' => 25],
                     ],
                 ]

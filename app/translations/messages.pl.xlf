@@ -347,6 +347,80 @@
                 <target>Nie znaleziono</target>
             </trans-unit>
 
+            <trans-unit id="title.user_register">
+                <source>title.user_register</source>
+                <target>Rejestracja</target>
+            </trans-unit>
+
+            <trans-unit id="label.access_data">
+                <source>label.access_data</source>
+                <target>Dane dostępowe</target>
+            </trans-unit>
+
+            <trans-unit id="label.Password">
+                <source>label.Password</source>
+                <target>Hasło</target>
+            </trans-unit>
+
+            <trans-unit id="label.Repeat Password">
+                <source>label.Repeat_Password</source>
+                <target>Powtórz hasło</target>
+            </trans-unit>
+
+            <trans-unit id="title.password_edit">
+                <source>title.password_edit</source>
+                <target>Edycja hasła</target>
+            </trans-unit>
+
+            <trans-unit id="title.data_edit">
+                <source>title.data_edit</source>
+                <target>Edycja danych</target>
+            </trans-unit>
+
+            <trans-unit id="title.grant_admin">
+                <source>title.grant_admin</source>
+                <target>Nadawanie uprawnień admina</target>
+            </trans-unit>
+
+            <trans-unit id="title.review_new">
+                <source>title.review_new</source>
+                <target>Nowy komentarz</target>
+            </trans-unit>
+
+            <trans-unit id="label.content">
+                <source>label.content</source>
+                <target>Treść</target>
+            </trans-unit>
+
+            <trans-unit id="label.photo">
+                <source>label.photo</source>
+                <target>Zdjęcie</target>
+            </trans-unit>
+
+            <trans-unit id="title.photo_delete">
+                <source>title.photo_delete</source>
+                <target>Usuwanie zdjęcia</target>
+            </trans-unit>
+
+            <trans-unit id="title.photo_new">
+                <source>title.photo_new</source>
+                <target>Dodawanie zdjęcia</target>
+            </trans-unit>
+
+            <trans-unit id="text.Hello">
+                <source>text.Hello</source>
+                <target>Witaj</target>
+            </trans-unit>
+
+            <trans-unit id="title.review_delete">
+                <source>title.review_delete</source>
+                <target>Usuwanie komentarza</target>
+            </trans-unit>
+
+            <trans-unit id="message.registered_successfully">
+                <source>message.registered_successfully</source>
+                <target>Zarejestrowano!</target>
+            </trans-unit>
 
         </body>
     </file>

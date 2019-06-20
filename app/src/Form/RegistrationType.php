@@ -5,6 +5,7 @@
 
 namespace App\Form;
 
+use App\Entity\User;
 use App\Entity\UserData;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -46,7 +47,7 @@ class RegistrationType extends AbstractType
             [
                 'label' => 'label.city',
                 'required' => true,
-                'attr' => ['max_length' => 128],
+                'attr' => ['max_length' => 45],
             ]
         );
         $builder->add(
@@ -65,8 +66,6 @@ class RegistrationType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => UserData::class,
-
-            'validation_groups' => ['Default', 'Password'],
         ]);
     }
 }

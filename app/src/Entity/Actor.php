@@ -26,9 +26,12 @@ class Actor
      * @ORM\Column(type="string", length=128)
      *
      * @Assert\NotBlank
+     * @Assert\Type("string")
+     * @Assert\Regex("/[A-Za-z]+/")
      * @Assert\Length(
+     *     min="3",
      *     max="128",
-     * )
+     *     )
      */
     private $name;
 

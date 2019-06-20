@@ -6,6 +6,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserDataRepository")
@@ -21,22 +22,49 @@ class UserData
 
     /**
      * @ORM\Column(type="string", length=45)
+     *
+     * @Assert\NotBlank
+     * @Assert\Type("string")
+     * @Assert\Regex("/[A-Za-z]+/")
+     * @Assert\Length(
+     *     min="3",
+     *     max="45",
+     * )
      */
     private $city;
 
     /**
      * @ORM\Column(type="integer")
+     *
+     * @Assert\NotBlank
+     * @Assert\Type(
+     *     type="integer",
+     * )
+     * @Assert\Range(
+     *      min = 7,
+     *      max = 130,
+     * )
      */
     private $age;
 
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\User", inversedBy="userdata", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
+     *
+     * @Assert\Valid()
      */
     private $user;
 
     /**
      * @ORM\Column(type="string", length=64)
+     *
+     * @Assert\NotBlank
+     * @Assert\Type("string")
+     * @Assert\Regex("/[A-Za-z]+/")
+     * @Assert\Length(
+     *     min="3",
+     *     max="64",
+     *     )
      */
     private $firstName;
 

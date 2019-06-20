@@ -8,6 +8,7 @@ namespace App\Entity;
 use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ReviewRepository")
@@ -23,11 +24,23 @@ class Review
 
     /**
      * @ORM\Column(type="integer")
+     *
+     * @Assert\NotNull
+     * @Assert\Range(
+     *      min = 1,
+     *      max = 10,
+     * )
      */
     private $rate;
 
     /**
      * @ORM\Column(type="text")
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *     min="3",
+     *     max="500",
+     * )
      */
     private $content;
 
