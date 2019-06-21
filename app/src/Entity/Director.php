@@ -27,10 +27,9 @@ class Director
      *
      * @Assert\NotBlank
      * @Assert\Type("string")
-     * @Assert\Regex("/[A-Za-z]+/")
      * @Assert\Length(
-     *     min="3",
      *     max="128",
+     *     min="3",
      *     )
      */
     private $name;

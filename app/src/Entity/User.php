@@ -9,7 +9,6 @@ namespace App\Entity {
     use Symfony\Component\Security\Core\User\UserInterface;
     use Symfony\Component\Validator\Constraints as Assert;
     use Doctrine\Common\Collections\ArrayCollection;
-    use Symfony\Component\Security\Core\Validator\Constraints as SecurityAssert;
 
     /**
      * Class User.
@@ -78,7 +77,7 @@ namespace App\Entity {
         private $password;
 
         /**
-         * @ORM\OneToOne(targetEntity="App\Entity\UserData", mappedBy="user", cascade={"persist", "remove"})
+         * @ORM\OneToOne(targetEntity="App\Entity\UserData", mappedBy="user", cascade={"persist", "remove"}, fetch="EXTRA_LAZY")
          *
          * @Assert\Valid()
          */

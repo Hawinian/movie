@@ -2,28 +2,28 @@
 
 body
 {
-    background-color: #F0FFFF;
+    background-color: #ffffe6;
 
 }
 
 .table-striped thead
 {
-    background-color: rgba(0,0,0,.3)
+    background-color: rgba(0,0,0,.2)
 }
 
 .table-striped tbody tr:nth-of-type(2n+1)
 {
-background-color: rgba(0,0,0,.1)
+background-color: rgba(0,0,0,.05)
 }
 
 .table-striped tbody tr:nth-of-type(2n)
 {
-    background-color: rgba(0,0,0,.2)
+    background-color: rgba(0,0,0,.1)
 }
 
 a
 {
-    color: #7B68EE;
+    color:  #99003d;
 }
 
 
@@ -54,14 +54,28 @@ a
 }
 
 
-.page-item.active .page-link
-{
+.page-item.active .page-link {
     z-index: 1;
     color: darkred;
     background-color: beige;
     border-color: #b9bbbe;
 }
+
+.page-item.disabled .page-link
+{
+    background-color:#f2f2f2;
+}
+
+.form-control
+{
+    background-color: #f2f2f2;
+}
 /*
+input
+{
+    background-color: #cceeff;
+}
+
 .navigation text-center
 {
     text-decoration-color:green;

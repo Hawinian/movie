@@ -29,6 +29,7 @@ class UserDataType extends AbstractType
             [
                 'label' => 'label.firstName',
                 'required' => true,
+                'attr' => ['maxlength' => 128],
             ]
         );
 
@@ -38,6 +39,7 @@ class UserDataType extends AbstractType
             [
                 'label' => 'label.age',
                 'required' => true,
+                'attr' => ['maxlength' => 3],
             ]
         );
         $builder->add(
@@ -46,7 +48,7 @@ class UserDataType extends AbstractType
             [
                 'label' => 'label.city',
                 'required' => true,
-                'attr' => ['max_length' => 45],
+                'attr' => ['maxlength' => 45],
             ]
         );
     }

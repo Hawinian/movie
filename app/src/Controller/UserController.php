@@ -198,7 +198,7 @@ class UserController extends AbstractController
      */
     public function delete(Request $request, Movie $movie, MovieRepository $repository): Response
     {
-        $form = $this->createForm(FormType::class, $movie, ['method' => 'DELETE']);
+        $form = $this->createForm(FormType::class, $movie->getId(), ['method' => 'DELETE']);
         $form->handleRequest($request);
 
         if ($request->isMethod('DELETE') && !$form->isSubmitted()) {

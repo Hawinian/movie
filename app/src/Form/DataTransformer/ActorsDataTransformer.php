@@ -69,16 +69,14 @@ class ActorsDataTransformer implements DataTransformerInterface
     public function reverseTransform($value): array
     {
         $actorTitles = explode(',', $value);
-
         $actors = [];
-
         foreach ($actorTitles as $actorTitle) {
             if ('' !== trim($actorTitle)) {
                 $actor = $this->repository->findOneByName(strtolower($actorTitle));
                 if (null == $actor) {
                     $actor = new Actor();
                     $actor->setName($actorTitle);
-                    $this->repository->save($actor);
+                    // $this->repository->save($actor);
                 }
                 $actors[] = $actor;
             }

@@ -422,6 +422,22 @@
                 <target>Zarejestrowano!</target>
             </trans-unit>
 
+            <trans-unit id="title.user_movie_list">
+                <source>title.user_movie_list</source>
+                <target>Twoja lista filmów</target>
+            </trans-unit>
+
+            <trans-unit id="action.edit_photo">
+                <source>action.edit_photo</source>
+                <target>Edytuj zdjęcie</target>
+            </trans-unit>
+
+            <trans-unit id="title.photo_edit">
+                <source>title.photo_edit</source>
+                <target>Edytowanie zdjęcia</target>
+            </trans-unit>
+
+
         </body>
     </file>
 </xliff>

@@ -413,7 +413,20 @@
                 <target>Registered!</target>
             </trans-unit>
 
+            <trans-unit id="title.user_movie_list">
+                <source>title.user_movie_list</source>
+                <target>User movies and options</target>
+            </trans-unit>
 
+            <trans-unit id="action.edit_photo">
+                <source>action.edit_photo</source>
+                <target>Edit photo</target>
+            </trans-unit>
+
+            <trans-unit id="title.photo_edit">
+                <source>title.photo_edit</source>
+                <target>Edit photo</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

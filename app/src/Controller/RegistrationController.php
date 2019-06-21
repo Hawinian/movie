@@ -28,7 +28,6 @@ class RegistrationController extends AbstractController
      *
      * @param Request                      $request
      * @param UserPasswordEncoderInterface $passwordEncoder
-     *
      * @param UserDataRepository           $repository
      * @param UserRepository               $userrepository
      *

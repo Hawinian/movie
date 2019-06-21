@@ -60,8 +60,7 @@ class DirectorDataTransformer implements DataTransformerInterface
             $director = $this->repository->findOneByName(strtolower($value));
             if (null == $director) {
                 $newDirector->setName($value);
-                $this->repository->save($newDirector);
-
+                //$this->repository->save($newDirector);
                 return $newDirector;
             }
         }

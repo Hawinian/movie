@@ -23,7 +23,7 @@ class Actor
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=128)
+     * @ORM\Column(type="string", length=255)
      *
      * @Assert\NotBlank
      * @Assert\Type("string")

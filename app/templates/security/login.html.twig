@@ -6,7 +6,12 @@
 
 {% block body %}
     <div>
-        <a href="{{ url('user_register') }}">{{ 'action.register'|trans }}</a>
+        <a href="{{ url('user_register') }}" title="{{ 'action.register'|trans }}">{{ 'action.register'|trans }}</a>
+    </div>
+    <div>
+        <a href="{{ url('movie_index') }}" title="{{ 'action.movie_list'|trans }}">
+            {{ 'action.movie_list'|trans }}
+        </a>
     </div>
 
     <h1>

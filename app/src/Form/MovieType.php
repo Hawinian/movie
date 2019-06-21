@@ -84,7 +84,7 @@ class MovieType extends AbstractType
                 [
                 'label' => 'label.title',
                 'required' => true,
-                'attr' => ['max_length' => 128],
+                'attr' => ['maxlength' => 128],
                 ]
             );
 
@@ -94,7 +94,7 @@ class MovieType extends AbstractType
             [
                     'label' => 'label.year',
                     'required' => true,
-                    'attr' => ['max_length' => 4],
+                    'attr' => ['maxlength' => 4],
                         ]
         );
 
@@ -128,6 +128,7 @@ class MovieType extends AbstractType
             [
                 'label' => 'label.country',
                 'required' => true,
+                'attr' => ['maxlength' => 128],
                 //'class' => Country::class,
                 //'choice_label' => 'name',
                 ]
@@ -139,6 +140,7 @@ class MovieType extends AbstractType
             [
                     'label' => 'label.director',
                     'required' => true,
+                'attr' => ['maxlength' => 128],
                     //'class' => Director::class,
                    // 'choice_label' => 'name',
                 ]
@@ -150,6 +152,7 @@ class MovieType extends AbstractType
             [
                     'label' => 'label.screenwriter',
                     'required' => true,
+                'attr' => ['maxlength' => 128],
                   //  'class' => Screenwriter::class,
                    // 'choice_label' => 'name',
                 ]
@@ -173,11 +176,10 @@ class MovieType extends AbstractType
                     'label' => 'label.actors',
                     'required' => false,
                     'attr' => [
-                        'max_length' => 255,
+                        'maxlength' => 255,
                     ],
                 ]
         );
-
         $builder->get('actors')->addModelTransformer(
             $this->actorsDataTransformer
         );

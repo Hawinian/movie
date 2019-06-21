@@ -66,19 +66,26 @@
                 {% endfor %} </dd>
 
             </table>
-            <div>
-                <form action="{{ url('photo_new', {id: movie.id}) }}">
-                    <input type="submit" value="{{ 'action.add_photo'|trans }}" />
-                </form><br>
-            </div>
+
 
     {% if movie.photo is defined and movie.photo|length %}
+        <div>
+            <form action="{{ url('photo_new', {id: movie.id}) }}">
+                <input type="submit" value="{{ 'action.edit_photo'|trans }}" />
+            </form><br>
+        </div>
+
         <div>
             <form action="{{ url('photo_delete', {id: movie.photo.id}) }}">
                 <input type="submit" value="{{ 'action.delete_photo'|trans }}" />
             </form><br>
         </div>
-
+        {% else %}
+            <div>
+                <form action="{{ url('photo_new', {id: movie.id}) }}">
+                    <input type="submit" value="{{ 'action.add_photo'|trans }}" />
+                </form><br>
+            </div>
         {% endif %}
 
                 <dd>

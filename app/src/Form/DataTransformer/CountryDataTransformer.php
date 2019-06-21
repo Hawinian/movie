@@ -7,6 +7,8 @@ namespace App\Form\DataTransformer;
 
 use App\Entity\Country;
 use App\Repository\CountryRepository;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Symfony\Component\Form\DataTransformerInterface;
 
 /**
@@ -52,8 +54,8 @@ class CountryDataTransformer implements DataTransformerInterface
      *
      * @return Country
      *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws ORMException
+     * @throws OptimisticLockException
      */
     public function reverseTransform($value): Country
     {
@@ -62,7 +64,7 @@ class CountryDataTransformer implements DataTransformerInterface
             $country = $this->repository->findOneByName(strtolower($value));
             if (null == $country) {
                 $newCountry->setName($value);
-                $this->repository->save($newCountry);
+                // $this->repository->save($newCountry);
 
                 return $newCountry;
             }

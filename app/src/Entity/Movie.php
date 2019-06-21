@@ -93,7 +93,7 @@ namespace App\Entity {
         private $category;
 
         /**
-         * @ORM\ManyToOne(targetEntity="App\Entity\Screenwriter", inversedBy="movies")
+         * @ORM\ManyToOne(targetEntity="App\Entity\Screenwriter", inversedBy="movies", cascade={"persist"})
          * @ORM\JoinColumn(nullable=false)
          *
          * @Assert\NotBlank
@@ -102,7 +102,7 @@ namespace App\Entity {
         private $screenwriter;
 
         /**
-         * @ORM\ManyToOne(targetEntity="App\Entity\Director", inversedBy="movies")
+         * @ORM\ManyToOne(targetEntity="App\Entity\Director", inversedBy="movies", cascade={"persist"})
          * @ORM\JoinColumn(nullable=false)
          *
          * @Assert\NotBlank
@@ -144,14 +144,19 @@ namespace App\Entity {
         private $country;
 
         /**
-         * @ORM\ManyToMany(targetEntity="App\Entity\Actor", inversedBy="movies")
-         *
+         * @ORM\ManyToMany(targetEntity="App\Entity\Actor",
+         *     inversedBy="movies",
+         *     cascade={"persist"},
+         *     orphanRemoval=true,
+         *     fetch="EXTRA_LAZY")
          * @Assert\Valid()
          */
         private $actors;
 
         /**
-         * @ORM\OneToOne(targetEntity="App\Entity\Photo", mappedBy="movie", cascade={"persist", "remove"})
+         * @ORM\OneToOne(targetEntity="App\Entity\Photo",
+         *     mappedBy="movie",
+         *     cascade={"persist", "remove"})
          */
         private $photo;
 

@@ -61,7 +61,10 @@ class PhotoController extends AbstractController
      *     methods={"GET", "POST"},
      *     name="photo_new",
      * )
-     *
+     *     @IsGranted(
+     *     "MANAGE",
+     *     subject="movie",
+     *     )
      * @IsGranted("ROLE_USER")
      */
     public function new(Request $request, Movie $movie, PhotoRepository $repository): Response
@@ -125,6 +128,8 @@ class PhotoController extends AbstractController
      * @param PhotoRepository $repository
      * @param Filesystem      $filesystem Filesystem component
      *
+     * @param Movie           $movie
+     *
      * @return Response
      *
      * @throws ORMException
@@ -136,7 +141,10 @@ class PhotoController extends AbstractController
      *     requirements={"id": "[1-9]\d*"},
      *     name="photo_edit",
      * )
-     *
+     * @IsGranted(
+     *     "MANAGE",
+     *     subject="photo",
+     *     )
      * @IsGranted("ROLE_USER")
      */
     public function edit(Request $request, Photo $photo, PhotoRepository $repository, Filesystem $filesystem): Response
@@ -190,7 +198,10 @@ class PhotoController extends AbstractController
      *     requirements={"id": "[1-9]\d*"},
      *     name="photo_delete",
      * )
-     *
+     *     @IsGranted(
+     *     "MANAGE",
+     *     subject="photo",
+     *     )
      * @IsGranted("ROLE_USER")
      */
     public function delete(Request $request, Photo $photo, PhotoRepository $repository): Response
