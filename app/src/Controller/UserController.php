@@ -239,7 +239,10 @@ class UserController extends AbstractController
      *     requirements={"id": "[1-9]\d*"},
      *     name="user_change_data",
      * )
-     *
+     * @IsGranted(
+     *     "USER",
+     *     subject="userdata",
+     *     )
      * @IsGranted("ROLE_USER")
      */
     public function changeData(Request $request, UserData $userdata, UserDataRepository $repository): Response
@@ -284,6 +287,10 @@ class UserController extends AbstractController
      *     name="user_change_pass",
      * )
      *
+     * @IsGranted(
+     *     "USER",
+     *     subject="user",
+     *     )
      * @IsGranted("ROLE_USER")
      */
     public function changePassword(Request $request, User $user, UserRepository $repository, UserPasswordEncoderInterface $passwordEncoder): Response

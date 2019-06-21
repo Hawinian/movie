@@ -427,6 +427,11 @@
                 <source>title.photo_edit</source>
                 <target>Edit photo</target>
             </trans-unit>
+
+            <trans-unit id="title.user_delete">
+                <source>title.user_delete</source>
+                <target>User delete</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

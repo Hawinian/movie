@@ -437,6 +437,11 @@
                 <target>Edytowanie zdjęcia</target>
             </trans-unit>
 
+            <trans-unit id="title.user_delete">
+                <source>title.user_delete</source>
+                <target>Usuwanie użytkownika</target>
+            </trans-unit>
+
 
         </body>
     </file>

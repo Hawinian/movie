@@ -15,9 +15,9 @@
 
             <dt>{{ 'label.image'|trans }}</dt>
             <dd>
-                {% if photo is defined and photo|length %}
+                {% if movie.photo is defined and movie.photo|length %}
                     <div>
-                        <img src="{{ asset('uploads/photos/'~ photo.file.filename) }}">
+                        <img src="{{ asset('uploads/photos/'~ movie.photo.file.filename) }}">
                     </div>
                 {% else %}
                     {% include 'default/_single_flash_message.html.twig' with {

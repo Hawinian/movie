@@ -78,8 +78,9 @@ namespace App\Entity {
          *
          * @Assert\NotBlank
          * @Assert\Type("integer")
-         * @Assert\LessThanOrEqual(
-         *     value = 3000000000
+         * @Assert\Range(
+         *      min = 0,
+         *      max = 2147483640,
          * )
          */
         private $boxoffice;
