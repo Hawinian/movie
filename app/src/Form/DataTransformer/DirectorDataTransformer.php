@@ -49,12 +49,10 @@ class DirectorDataTransformer implements DataTransformerInterface
      * @param mixed $value
      *
      * @return Director
-     *
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
      */
     public function reverseTransform($value): Director
     {
+        $director = new Director();
         $newDirector = new Director();
         if ('' !== trim($value)) {
             $director = $this->repository->findOneByName(strtolower($value));

@@ -7,8 +7,6 @@ namespace App\Form\DataTransformer;
 
 use App\Entity\Country;
 use App\Repository\CountryRepository;
-use Doctrine\ORM\OptimisticLockException;
-use Doctrine\ORM\ORMException;
 use Symfony\Component\Form\DataTransformerInterface;
 
 /**
@@ -53,12 +51,10 @@ class CountryDataTransformer implements DataTransformerInterface
      * @param mixed $value
      *
      * @return Country
-     *
-     * @throws ORMException
-     * @throws OptimisticLockException
      */
     public function reverseTransform($value): Country
     {
+        $country = new Country();
         $newCountry = new Country();
         if ('' !== trim($value)) {
             $country = $this->repository->findOneByName(strtolower($value));

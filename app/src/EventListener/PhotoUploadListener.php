@@ -31,6 +31,7 @@ class PhotoUploadListener
      * PhotoUploadListener constructor.
      *
      * @param FileUploader $fileUploader File uploader service
+     * @param Filesystem   $filesystem
      */
     public function __construct(FileUploader $fileUploader, Filesystem $filesystem)
     {

@@ -7,8 +7,6 @@ namespace App\Form\DataTransformer;
 
 use App\Entity\Screenwriter;
 use App\Repository\ScreenwriterRepository;
-use Doctrine\ORM\OptimisticLockException;
-use Doctrine\ORM\ORMException;
 use Symfony\Component\Form\DataTransformerInterface;
 
 /**
@@ -53,12 +51,10 @@ class ScreenwriterDataTransformer implements DataTransformerInterface
      * @param mixed $value
      *
      * @return Screenwriter
-     *
-     * @throws ORMException
-     * @throws OptimisticLockException
      */
     public function reverseTransform($value): Screenwriter
     {
+        $screenwriter = new Screenwriter();
         $newScreenwriter = new Screenwriter();
         if ('' !== trim($value)) {
             $screenwriter = $this->repository->findOneByName(strtolower($value));

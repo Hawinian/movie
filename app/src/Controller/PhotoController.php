@@ -86,9 +86,6 @@ class PhotoController extends AbstractController
             $repository->save($photo);
             $this->addFlash('success', 'message.created_successfully');
 
-
-
-
             return $this->redirectToRoute('user_index');
         }
 
@@ -130,7 +127,6 @@ class PhotoController extends AbstractController
      * @param Photo           $photo
      * @param PhotoRepository $repository
      * @param Filesystem      $filesystem Filesystem component
-     * @param Movie           $movie
      *
      * @return Response
      *
@@ -218,7 +214,6 @@ class PhotoController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $repository->delete($photo);
             $this->addFlash('success', 'message.deleted_successfully');
-
 
             return $this->redirectToRoute('user_index');
         }

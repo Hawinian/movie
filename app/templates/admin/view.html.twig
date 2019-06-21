@@ -17,7 +17,7 @@
             <dd>
                 {% if movie.photo is defined and movie.photo|length %}
                     <div>
-                        <img src="{{ asset('uploads/photos/'~ movie.photo.file.filename) }}">
+                        <img alt="photo" src="{{ asset('uploads/photos/'~ movie.photo.file.filename) }}">
                     </div>
                 {% else %}
                     {% include 'default/_single_flash_message.html.twig' with {
@@ -55,7 +55,7 @@
                     <th>{{ 'label.review-author'|trans }}</th>
                     <th>{{ 'label.review-delete'|trans }}</th>
                 </tr>
-            <dd>{% for review in movie.reviews %}
+                {% for review in movie.reviews %}
 
                 <tr>
                     <td>{{review.content}}</td>
@@ -67,7 +67,7 @@
                         </a></td>
 
                     </tr>
-                {% endfor %} </dd>
+                {% endfor %}
 
             </table>
             {% if movie.photo is defined and movie.photo|length %}

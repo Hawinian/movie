@@ -52,9 +52,10 @@ class MovieType extends AbstractType
     /**
      * MovieType constructor.
      *
-     * @param ActorsDataTransformer   $actorsDataTransformer
-     * @param CountryDataTransformer  $countryDataTransformer
-     * @param DirectorDataTransformer $directorDataTransformer
+     * @param ActorsDataTransformer       $actorsDataTransformer
+     * @param CountryDataTransformer      $countryDataTransformer
+     * @param DirectorDataTransformer     $directorDataTransformer
+     * @param ScreenwriterDataTransformer $screenwriterDataTransformer
      */
     public function __construct(ActorsDataTransformer $actorsDataTransformer, CountryDataTransformer $countryDataTransformer, DirectorDataTransformer $directorDataTransformer, ScreenwriterDataTransformer $screenwriterDataTransformer)
     {

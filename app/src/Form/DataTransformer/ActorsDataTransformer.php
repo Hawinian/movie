@@ -8,8 +8,6 @@ namespace App\Form\DataTransformer;
 use App\Entity\Actor;
 use App\Repository\ActorRepository;
 use Doctrine\Common\Collections\Collection;
-use Doctrine\ORM\OptimisticLockException;
-use Doctrine\ORM\ORMException;
 use Symfony\Component\Form\DataTransformerInterface;
 
 /**
@@ -62,9 +60,6 @@ class ActorsDataTransformer implements DataTransformerInterface
      * @param string $value String of actor names
      *
      * @return array Result
-     *
-     * @throws ORMException
-     * @throws OptimisticLockException
      */
     public function reverseTransform($value): array
     {

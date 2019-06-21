@@ -1,5 +1,7 @@
 <?php
 
+/** AccessDenied Handler */
+
 namespace App\Security;
 
 use Symfony\Component\HttpFoundation\Request;
@@ -22,7 +24,7 @@ class AccessDeniedHandler implements AccessDeniedHandlerInterface
     {
         // ...
 
-        $content = 'Access denied';
+        $content = 'Access denied.';
 
         return new Response($content, 403);
     }

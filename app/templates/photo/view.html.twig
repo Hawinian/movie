@@ -8,7 +8,7 @@
     <h1>{{ 'title.photo_view' }}</h1>
     {% if photo is defined and photo|length %}
         <div>
-            <img src="{{ asset('uploads/photos/'~ photo.file.filename) }}">
+            <img alt="photo" src="{{ asset('uploads/photos/'~ photo.file.filename) }}">
         </div>
     {% else %}
         {% include 'default/_single_flash_message.html.twig' with {
